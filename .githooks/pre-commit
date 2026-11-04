@@ -1,0 +1,30 @@
+#!/bin/sh
+# Bloquea cualquier commit que no se haga en una rama tarea/<modulo>/<descripcion>.
+# main, develop y modulo/* solo reciben cambios por Pull Request en GitHub.
+# Para actualizar un módulo desde develop se crea una tarea de integración
+# (ver docs/GIT.md); por eso acá no hay ninguna excepción.
+
+rama=$(git symbolic-ref --quiet --short HEAD)
+
+if [ -z "$rama" ]; then
+    echo >&2 ""
+    echo >&2 "✖ Commit bloqueado: no estás en ninguna rama (HEAD separado)."
+    echo >&2 "  Creá o cambiá a una rama de tarea: git switch -c tarea/<modulo>/<descripcion>"
+    echo >&2 ""
+    exit 1
+fi
+
+# Minúsculas, números y guiones en cada parte. Ej.: tarea/personaje/golpe-mano
+if ! echo "$rama" | grep -Eq '^tarea/[a-z0-9-]+/[a-z0-9-]+$'; then
+    echo >&2 ""
+    echo >&2 "✖ Commit bloqueado en la rama '$rama'."
+    echo >&2 "  Solo se commitea en ramas tarea/<modulo>/<descripcion>"
+    echo >&2 "  (minúsculas, números y guiones). Ejemplo: tarea/personaje/golpe-mano"
+    echo >&2 ""
+    echo >&2 "  Si ya hiciste cambios acá, llevalos a una tarea sin perderlos:"
+    echo >&2 "    git switch -c tarea/<modulo>/<descripcion>"
+    echo >&2 ""
+    exit 1
+fi
+
+exit 0

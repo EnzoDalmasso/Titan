@@ -1,0 +1,8 @@
+#!/bin/sh
+# Reenvía el evento a Git LFS. Es necesario porque core.hooksPath apunta a
+# .githooks y Git deja de ejecutar los hooks que LFS instala en .git/hooks.
+command -v git-lfs >/dev/null 2>&1 || {
+    echo >&2 "✖ Git LFS no está instalado. Instalalo (https://git-lfs.com) y corré: git lfs install"
+    exit 2
+}
+git lfs post-checkout "$@"
