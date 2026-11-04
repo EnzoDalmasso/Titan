@@ -72,7 +72,7 @@ Módulos, cada uno con su assembly definition (`Titan.<Modulo>`):
 | Módulo | Contenido |
 |---|---|
 | `Core` | Tipos y contratos compartidos: `CuadroCorporal`, `IFuenteCorporal`, eventos de juego |
-| `Kinect` | Lectura del sensor, grabación y reproducción de sesiones |
+| `Kinect` | Implementaciones de `IFuenteCorporal` (sensor, sesiones grabadas y simulada con teclado y mouse) y grabación de sesiones. Única con referencia a Input System |
 | `Gestos` | Detección de gestos en C# puro, sin MonoBehaviour |
 | `Personaje` | El titán y su movimiento |
 | `Enemigos` | Soldados, catapultas y rocas |

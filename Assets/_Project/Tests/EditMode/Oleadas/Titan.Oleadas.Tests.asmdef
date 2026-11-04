@@ -1,0 +1,14 @@
+{
+    "name": "Titan.Oleadas.Tests",
+    "rootNamespace": "Titan.Oleadas.Tests",
+    "references": ["UnityEngine.TestRunner", "UnityEditor.TestRunner", "Titan.Core", "Titan.Oleadas"],
+    "includePlatforms": ["Editor"],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": ["nunit.framework.dll"],
+    "autoReferenced": false,
+    "defineConstraints": ["UNITY_INCLUDE_TESTS"],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
