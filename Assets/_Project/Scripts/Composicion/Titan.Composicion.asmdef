@@ -1,0 +1,14 @@
+{
+    "name": "Titan.Composicion",
+    "rootNamespace": "Titan.Composicion",
+    "references": ["Titan.Core", "Titan.Kinect", "Titan.Gestos", "Titan.Personaje", "Titan.Enemigos", "Titan.Pueblo", "Titan.Oleadas", "Titan.Flujo"],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -11,16 +11,16 @@ Actualizá esta tabla en la misma tarea que cambia el estado.
 | Commit inicial, ramas `main`/`develop`/`modulo/setup` | Enzo | ✅ |
 | Reglas de protección en GitHub | Enzo | ✅ |
 | `tarea/setup/git-config`: gitignore, gitattributes con LFS, hooks y Smart Merge | Enzo | ✅ (#1) |
-| `tarea/setup/documentacion`: CLAUDE.md, README, GIT.md, ROADMAP y concepto | Enzo | 👀 |
-| `tarea/setup/proyecto-unity`: proyecto, URP, Input System, carpetas, asmdefs y escenas | Enzo | ⬜ |
-| PR `modulo/setup` → `develop` | Enzo (revisa Julián) | ⬜ |
-| Preparar PC: herramientas, clon y `configurar-git.ps1` | Julián | 🔄 |
+| `tarea/setup/documentacion`: CLAUDE.md, README, GIT.md, ROADMAP y concepto | Enzo | ✅ (#2) |
+| `tarea/setup/proyecto-unity`: proyecto, URP, Input System, carpetas, asmdefs y escenas | Enzo | ✅ (#3) |
+| PR `modulo/setup` → `develop` | Enzo (revisa Julián) | 👀 |
+| Preparar PC: herramientas, clon y `configurar-git.ps1` | Julián | ⬜ |
 
 ## M1 — Kinect funcionando, esqueleto visible, grabación y reproducción
 
 | Tarea | Responsable | Estado |
 |---|---|---|
-| Spike 1: verificar el sensor con el SDK 1.8 y el Developer Toolkit | Julián | 🔄 |
+| Spike 1: verificar el sensor con el SDK 1.8 y el Developer Toolkit | Julián | ⬜ |
 | Contratos de Core: `CuadroCorporal`, `IFuenteCorporal` | Enzo + Julián | ⬜ |
 | Spike 2: puente C# x64 por UDP (`Tools/KinectBridge`) | Julián | ⬜ |
 | Spike 3: comparar el puente con el SDK directo en Unity y elegir con evidencia | Julián | ⬜ |
