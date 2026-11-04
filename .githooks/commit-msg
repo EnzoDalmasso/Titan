@@ -1,0 +1,29 @@
+#!/bin/sh
+# Exige el formato Conventional Commits en la primera línea del mensaje:
+#   tipo(alcance): descripción
+# Ej.: feat(personaje): agrega golpe de mano
+
+archivo_mensaje="$1"
+primera_linea=$(head -n 1 "$archivo_mensaje")
+
+# Los merges de una tarea de integración y los reverts traen un mensaje
+# que arma Git; se aceptan tal cual.
+case "$primera_linea" in
+    "Merge "*|"Revert "*|"fixup! "*|"squash! "*) exit 0 ;;
+esac
+
+patron='^(feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert)(\([a-z0-9-]+\))?!?: .+'
+
+if ! echo "$primera_linea" | grep -Eq "$patron"; then
+    echo >&2 ""
+    echo >&2 "✖ Mensaje de commit inválido:"
+    echo >&2 "    $primera_linea"
+    echo >&2 ""
+    echo >&2 "  Formato: tipo(alcance): descripción en español"
+    echo >&2 "  Tipos:   feat fix docs style refactor perf test build ci chore revert"
+    echo >&2 "  Ejemplo: feat(personaje): agrega golpe de mano"
+    echo >&2 ""
+    exit 1
+fi
+
+exit 0
