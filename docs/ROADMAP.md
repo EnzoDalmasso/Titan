@@ -12,8 +12,8 @@ Actualizá esta tabla en la misma tarea que cambia el estado.
 | Reglas de protección en GitHub | Enzo | ✅ |
 | `tarea/setup/git-config`: gitignore, gitattributes con LFS, hooks y Smart Merge | Enzo | ✅ (#1) |
 | `tarea/setup/documentacion`: CLAUDE.md, README, GIT.md, ROADMAP y concepto | Enzo | ✅ (#2) |
-| `tarea/setup/proyecto-unity`: proyecto, URP, Input System, carpetas, asmdefs y escenas | Enzo | 👀 |
-| PR `modulo/setup` → `develop` | Enzo (revisa Julián) | ⬜ |
+| `tarea/setup/proyecto-unity`: proyecto, URP, Input System, carpetas, asmdefs y escenas | Enzo | ✅ (#3) |
+| PR `modulo/setup` → `develop` | Enzo (revisa Julián) | 👀 |
 | Preparar PC: herramientas, clon y `configurar-git.ps1` | Julián | ⬜ |
 
 ## M1 — Kinect funcionando, esqueleto visible, grabación y reproducción
