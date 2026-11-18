@@ -26,9 +26,9 @@ Actualizá esta tabla en la misma tarea que cambia el estado.
 | Spike 3: comparar el puente con el SDK directo en Unity y elegir con evidencia | Julián | ⬜ |
 | Spike 4: medir la latencia real | Julián | ⬜ |
 | `FuenteKinect` | Julián | ⬜ |
-| `FuenteSimulada` (teclado y mouse) | Enzo | ⬜ |
+| `FuenteSimulada` (teclado y mouse) | Enzo | ✅ (#7) |
 | Formato de grabación y `FuenteGrabada` | Enzo | ⬜ |
-| Esqueleto visible con primitivas | Enzo | ⬜ |
+| Esqueleto visible con primitivas | Enzo | ✅ (#7) |
 | Grabar sesiones reales de cada gesto | Julián | ⬜ |
 
 ## M2 — El titán de placeholder copia al jugador
