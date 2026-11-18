@@ -21,7 +21,7 @@ Actualizá esta tabla en la misma tarea que cambia el estado.
 | Tarea | Responsable | Estado |
 |---|---|---|
 | Spike 1: verificar el sensor con el SDK 1.8 y el Developer Toolkit | Julián | ⬜ |
-| Contratos de Core: `CuadroCorporal`, `IFuenteCorporal` | Enzo + Julián | ⬜ |
+| Contratos de Core: `CuadroCorporal`, `IFuenteCorporal` | Enzo + Julián | ✅ (#6, falta validar con Julián) |
 | Spike 2: puente C# x64 por UDP (`Tools/KinectBridge`) | Julián | ⬜ |
 | Spike 3: comparar el puente con el SDK directo en Unity y elegir con evidencia | Julián | ⬜ |
 | Spike 4: medir la latencia real | Julián | ⬜ |
