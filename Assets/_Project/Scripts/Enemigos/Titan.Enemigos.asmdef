@@ -1,0 +1,14 @@
+{
+    "name": "Titan.Enemigos",
+    "rootNamespace": "Titan.Enemigos",
+    "references": ["Titan.Core"],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

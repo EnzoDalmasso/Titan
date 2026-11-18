@@ -1,0 +1,14 @@
+{
+    "name": "Titan.Pueblo.Tests",
+    "rootNamespace": "Titan.Pueblo.Tests",
+    "references": ["UnityEngine.TestRunner", "UnityEditor.TestRunner", "Titan.Core", "Titan.Pueblo"],
+    "includePlatforms": ["Editor"],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": ["nunit.framework.dll"],
+    "autoReferenced": false,
+    "defineConstraints": ["UNITY_INCLUDE_TESTS"],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

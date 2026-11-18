@@ -1,0 +1,14 @@
+{
+    "name": "Titan.Personaje",
+    "rootNamespace": "Titan.Personaje",
+    "references": ["Titan.Core"],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

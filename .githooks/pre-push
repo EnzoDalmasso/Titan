@@ -1,0 +1,43 @@
+#!/bin/sh
+# 1) Bloquea el push directo a main y develop: solo cambian por PR en GitHub.
+# 2) Le pasa el control a Git LFS para que suba los binarios.
+#    Como core.hooksPath apunta a .githooks, Git ya no ejecuta el hook que
+#    LFS instala en .git/hooks; sin esta llamada el push "funciona" pero en
+#    GitHub quedan solo los punteros y los binarios llegan rotos.
+
+ramas_protegidas="refs/heads/main refs/heads/develop"
+
+# Git manda por stdin una línea por cada referencia que se va a subir:
+#   <ref local> <sha local> <ref remota> <sha remoto>
+# Se guarda entera porque git lfs pre-push necesita leer lo mismo después.
+referencias=$(cat)
+
+bloqueado=0
+while read -r ref_local sha_local ref_remota sha_remoto; do
+    [ -z "$ref_remota" ] && continue
+    for protegida in $ramas_protegidas; do
+        if [ "$ref_remota" = "$protegida" ]; then
+            echo >&2 ""
+            echo >&2 "✖ Push bloqueado a '${ref_remota#refs/heads/}'."
+            echo >&2 "  main y develop solo reciben cambios por Pull Request."
+            bloqueado=1
+        fi
+    done
+done <<EOF
+$referencias
+EOF
+
+if [ "$bloqueado" -ne 0 ]; then
+    echo >&2 "  Subí tu rama tarea/* y abrí el PR desde ahí."
+    echo >&2 ""
+    exit 1
+fi
+
+if ! command -v git-lfs >/dev/null 2>&1; then
+    echo >&2 ""
+    echo >&2 "✖ Git LFS no está instalado. Instalalo (https://git-lfs.com) y corré: git lfs install"
+    echo >&2 ""
+    exit 2
+fi
+
+printf '%s\n' "$referencias" | git lfs pre-push "$@"

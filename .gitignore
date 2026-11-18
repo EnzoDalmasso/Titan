@@ -1,0 +1,88 @@
+# ============================================================
+# Unity
+# Todo lo de esta sección lo regenera Unity al abrir el proyecto.
+# Se ancla a la raíz (/) para no ignorar por error carpetas de
+# Assets que se llamen igual (por ejemplo Assets/_Project/Logs).
+# ============================================================
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+
+# Herramientas de publicación del Asset Store; no son parte del juego.
+/[Aa]ssets/[Aa]ssetStoreTools*
+
+# Proyectos y soluciones que Unity genera para el IDE.
+# El puente de Kinect tiene su propio .csproj y sí se versiona (ver abajo).
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# Archivos de depuración y crash reports
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+sysinfo.txt
+crashlytics-build.properties
+
+# Builds empaquetados
+*.apk
+*.aab
+*.unitypackage
+*.app
+
+# Paquetes de Addressables generados en el build
+/[Aa]ssets/[Ss]treamingAssets/aa.meta
+/[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# ============================================================
+# Puente de Kinect (Tools/KinectBridge, programa .NET aparte)
+# ============================================================
+!/Tools/KinectBridge/**/*.csproj
+!/Tools/KinectBridge/**/*.sln
+/Tools/KinectBridge/**/bin/
+/Tools/KinectBridge/**/obj/
+
+# ============================================================
+# IDEs y editores (configuración personal de cada uno)
+# ============================================================
+.vs/
+.idea/
+.vscode/
+*.swp
+*.DotSettings.user
+
+# ============================================================
+# Sistema operativo
+# ============================================================
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# ============================================================
+# Claude Code
+# CLAUDE.md y .claude/settings.json se comparten; la configuración
+# local de cada uno no.
+# ============================================================
+.claude/settings.local.json
+
+# ============================================================
+# Documentos de Office abiertos (archivos de bloqueo temporales)
+# ============================================================
+~$*
