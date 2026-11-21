@@ -22,10 +22,10 @@ Actualizá esta tabla en la misma tarea que cambia el estado.
 |---|---|---|
 | Spike 1: verificar el sensor con el SDK 1.8 y el Developer Toolkit | Julián | ✅ (prototipo, ver `docs/prototipo-julian`) |
 | Contratos de Core: `CuadroCorporal`, `IFuenteCorporal` | Enzo + Julián | ✅ (#6, falta validar con Julián) |
-| Spike 2: puente C# x64 por UDP (`Tools/KinectBridge`) | Julián | 🔄 funciona con texto; falta formato binario versionado con tiempo y estado |
+| Spike 2: puente C# x64 por UDP (`Tools/KinectBridge`) | Julián | 🔄 formato binario v1 listo; falta probarlo con el sensor |
 | Spike 3: comparar el puente con el SDK directo en Unity y elegir con evidencia | Julián | ✅ se elige el puente: el SDK directo en Unity falló |
 | Spike 4: medir la latencia real | Julián | ⬜ |
-| `FuenteKinect` (base: `KinectManos` del prototipo) | Julián | ⬜ |
+| `FuenteKinect` (base: `KinectManos` del prototipo) | Enzo + Julián | 🔄 escrita y con pruebas; falta probarla con el sensor |
 | `FuenteSimulada` (teclado y mouse) | Enzo | ✅ (#7) |
 | Formato de grabación y `FuenteGrabada` | Enzo | ⬜ |
 | Esqueleto visible con primitivas | Enzo | ✅ (#7) |
